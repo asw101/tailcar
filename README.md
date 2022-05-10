@@ -1,0 +1,2 @@
+# tailcar
+Tailscale Sidecar
