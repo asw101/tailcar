@@ -8,7 +8,7 @@ name: Manually create and publish a Docker image
 on:
   workflow_dispatch:
     inputs:
-      tag:
+      tags:
         description: 'The tag for the manually built image'
         required: true
         default: 'test'
