@@ -26,7 +26,7 @@ COPY sshd_config /etc/ssh/
 EXPOSE 80 2222
 
 # Copy binary to production image
-COPY --from=builder /app/start.sh /app/start.sh
+COPY --from=builder /app/start.sh /app/my-app /app/
 COPY --from=tailscale /app/tailscaled /app/tailscaled
 COPY --from=tailscale /app/tailscale /app/tailscale
 RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale
