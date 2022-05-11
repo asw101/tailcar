@@ -7,7 +7,9 @@ name: Build and push image
 
 on:
   push:
-    branches: ['release']
+    branches: ['release', 'latest']
+
+  workflow_dispatch: []
 
 env:
   REGISTRY: ghcr.io
@@ -42,6 +44,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ github.event.inputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           
