@@ -6,11 +6,10 @@
 name: Build and push image
 
 on:
+  workflow_dispatch:
   push:
-    branches: ['release', 'latest']
-
-  workflow_dispatch: []
-
+      branches: ['release']
+  
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
