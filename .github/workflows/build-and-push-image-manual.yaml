@@ -6,13 +6,7 @@
 name: Manually create and publish a Docker image
 
 on:
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'The tag for the manually built image'
-        required: true
-        default: 'test'
-        type: string
+  workflow_dispatch
 
 env:
   REGISTRY: ghcr.io
