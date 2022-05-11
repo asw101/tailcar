@@ -1,5 +1,7 @@
 #!/bin/sh
 
+[[ -z "${TAILSCALE_AUTHKEY:-}" ]] && echo "TAILSCALE_AUTHKEY not set" && exit 1
+
 /usr/bin/ssh-keygen -A
 mkdir -p /var/run/sshd
 /usr/sbin/sshd
