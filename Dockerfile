@@ -2,6 +2,7 @@ FROM golang:1.18-alpine3.15 as builder
 WORKDIR /app
 COPY . ./
 # This is where one could build the application code as well.
+RUN go build -o my-app .
 
 
 FROM alpine:latest as tailscale
