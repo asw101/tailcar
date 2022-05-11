@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Manually create and publish a Docker image
+name: Manually build and push image
 
 on:
   workflow_dispatch
